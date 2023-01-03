@@ -1,0 +1,6 @@
+---
+servers:
+  hosts:
+    smarthome:
+      ansible_host: 192.168.1.116
+      ansible_user: amrap030

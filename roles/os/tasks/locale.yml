@@ -1,0 +1,9 @@
+---
+- name: Generate the locale
+  locale_gen:
+    name: "{{ os_locale }}"
+    state: present
+
+- name: Set timezone
+  community.general.timezone:
+    name: "{{ os_timezone | default('Europe/Berlin') }}"

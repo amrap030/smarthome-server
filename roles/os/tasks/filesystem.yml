@@ -1,0 +1,12 @@
+---
+- name: Install filesystem tools
+  ansible.builtin.apt:
+    name: "{{ item }}"
+    update_cache: true
+  loop:
+    - dmraid
+    - gdisk
+    - hdparm
+    - lvm2
+    - smartmontools
+    - socat

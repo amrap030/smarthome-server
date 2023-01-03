@@ -1,0 +1,39 @@
+---
+os_timezone: "Europe/Berlin"
+os_locale: de_DE.UTF-8
+os_packages_install:
+  - apt-transport-https
+  - avahi-daemon
+  - ca-certificates
+  - containernetworking-plugins
+  - curl
+  - fzf
+  - gettext
+  - git
+  - htop
+  - lolcat
+  - ntpdate
+  - psmisc
+  - rclone
+  - software-properties-common
+  - tree
+  - uidmap
+  - unzip
+os_packages_remove:
+  - apparmor
+  - apport
+  - byobu
+  - friendly-recovery
+  - landscape-common
+  - lxd-agent-loader
+  - plymouth
+  - plymouth-theme-ubuntu-text
+  - popularity-contest
+  - snapd
+  - sosreport
+  - ubuntu-advantage-tools
+  - ufw
+
+username: amrap030
+enable_passwordless_sudo: yes
+enable_username_creation: yes

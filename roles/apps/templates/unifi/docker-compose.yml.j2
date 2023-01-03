@@ -1,0 +1,21 @@
+---
+version: "3.8"
+
+services:
+  unifi:
+    image: jacobalberty/unifi:v7.3.76
+    container_name: unifi
+    restart: unless-stopped
+    network_mode: "host"
+    volumes:
+      - unifi-data:/unifi
+    environment:
+      - TZ="Europe/Berlin"
+
+volumes:
+  unifi-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: "{{ containers_base_dir }}/data/unifi"
